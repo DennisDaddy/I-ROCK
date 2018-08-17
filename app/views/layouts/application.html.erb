@@ -9,6 +9,18 @@
   </head>
 
   <body>
+  	<div class="container">
+  		<div class="collapse navbar-collapse navbar-ex1-collapse">
+  			<ul class="nav navbar-nav">
+  				<li><%= link_to 'New Achievement', new_achievement_path %></li>
+  			</ul>
+  			
+  		</div>
+  		<% if flash[:notice] %>
+  		   <div class="alert alert-info"><%= flash[:notice] %></div>
+  		<% end %>
+  		
     <%= yield %>
+    </div>
   </body>
 </html>
